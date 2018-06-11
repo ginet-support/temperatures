@@ -1,0 +1,15 @@
+IMPLEMENTATION MODULE C2Fahr;
+
+PROCEDURE C2Fahr(Temp : REAL) : REAL;
+BEGIN
+
+IF Temp = 32.0 THEN
+    RETURN 32.0;
+ELSE
+    RETURN(Temp / (5.0/9.0) +32.0);
+END;
+
+END C2Fahr;
+
+
+END C2Fahr.
