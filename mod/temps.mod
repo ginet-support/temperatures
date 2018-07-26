@@ -37,9 +37,10 @@ BEGIN
     WriteFixed(Temp,2,2);WriteString(" degrees Celsius is ");
     WriteFixed(C2Fahr(Temp),2,2);WriteString(" degrees Fahrenheit");
     WriteString(" Which is ");
-    WriteFixed(Fahr2C(Temp)+273.15,2,2);WriteString(" degrees Kelvin.");
+    WriteFixed(C2Fahr(Temp)+273.15,2,2);WriteString(" degrees Kelvin.");
 
     WriteLn;
     END; (* IF *)
     UNTIL NOT Error;
     END Temps.
+

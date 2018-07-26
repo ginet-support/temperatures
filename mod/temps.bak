@@ -13,7 +13,7 @@ VAR
     Error : BOOLEAN;
 
 BEGIN
-    LOOP
+    REPEAT
     Error := FALSE;
     WriteString("Value: ");
     ReadReal(Temp); SkipLine;
@@ -41,8 +41,5 @@ BEGIN
 
     WriteLn;
     END; (* IF *)
-    IF NOT Error THEN
-    EXIT;(* run only once successfully *)
-    END; (* IF *)
-    END; (* outer loop *)
+    UNTIL NOT Error;
     END Temps.
